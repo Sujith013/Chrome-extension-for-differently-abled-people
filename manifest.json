@@ -1,0 +1,27 @@
+{
+    "manifest_version": 3,
+    "name": "Color Blindness analyser and solver",
+    "version": "1.0.0",
+    "description":"An extension to ease the access and navigation of web content for the color blind users by finding their problem and generating a solution for the same.",
+    "icons":{
+        "16":"icon.png",
+        "48":"icon.png",
+        "128":"icon.png"
+    },
+    "action": {
+        "default_popup":"main.html"
+    },
+
+    "permissions": [
+        "tabs",
+        "cookies",
+        "storage",
+        "scripting",
+        "activeTab"
+        ],
+    
+    "background": {
+            "service_worker": "bk.js",
+            "type": "module"
+    }
+}

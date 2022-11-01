@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' http://localhost/* 'unsafe-inline' 'unsafe-eval'" />
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Color blindness</title>
+</head>
+<body style="min-width:300px;">
+
+<div align="center">
+
+  <div id="mainDiv">
+
+    <h1 id="h1">Color blindness analyzer and solver</h1>
+    <img src="icon.png" alt="icon" width="150px" height="150px">
+    <h4 id="para">An extension to ease the access and navigation of web content for color blind users.</p>
+    
+    <br><br>
+    
+    <button id="next">Next -></button>
+    
+  </div>
+
+  <div id="qsre" align="center">
+
+    <h1>Problem Identification</h1> 
+
+    <h3>Take a quick test to find your problem!!</h3> <br>
+    
+    <button id="test1">Ishihara Test --></button> <br><br>
+    <button id="test1">Cambridge Color --></button> <br><br>
+    <button id="test1">Hue Test --></button> <br><br>
+
+    <h3>Know your problem already?</h3> <br>
+
+    <button id="gotoSol">Go to Solution</button>
+  
+  </div>
+
+  <div id="choose">
+
+    <h2 id="soln">Choose your problem</h2> 
+        
+        <label for="colorpick1">Red - Green</label>
+        <input type="radio" id="colorpick1" name="colorpick" value="red-green"> <br>
+        
+        <label for="colorpick2">Blue - Yellow</label>
+        <input type="radio" id="colorpick2" name="colorpick" value="blue-yellow"> <br>
+        
+        <label for="colorpick3">Complete</label>
+        <input type="radio" id="colorpick3" name="colorpick" value="Complete"> <br>
+
+    <button id="finish" > Solve / Change </button>
+  
+  </div>
+
+  <div id="ishihara">
+    
+    <h2>Ishihara Test</h2>
+    
+    <img id="ishId" width="150px" height="150px"> <br><br>
+
+    <input type="number" name="ishNum" id="ishNum" placeholder="Enter the number seen"> <br><br>
+
+    <button id="ishNext">Next</button>
+  
+  </div>
+
+  <div id="bldRes1">
+
+    <h2 id="bldRes"></h2> <br><br>
+  
+    <button class="back">Back</button>
+
+  </div>
+
+</div>
+</body>
+<script src="jquery-3.6.1.min.js"></script>
+<script src="background.js"></script>
+<script src="ishihara.js"></script>
+</html>
