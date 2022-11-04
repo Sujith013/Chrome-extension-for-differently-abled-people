@@ -16,7 +16,7 @@ button:hover{
     transition: all 0.5s;
 }
 
-#qsre,#ishihara,#bldRes1
+#qsre,#ishihara,#bldRes1,#cct,#choose
 {
     display: none;
     text-align: center;
@@ -24,20 +24,35 @@ button:hover{
     justify-items: center;
 }
 
-#ishihara img{
+#ishihara img, #cct img,#cctVs,#mainDiv img{
     text-align: center;
     justify-content: center;
     align-self: center; 
 }
 
-#qsre button{
+#qsre button,#cctVs{
     width: 200px;
 }
 
-#choose
+#mainDiv
 {
-    display: none;
     text-align: center;
     justify-content: center;
     justify-items: center;
+}
+
+table,td,th
+{
+    justify-items: center;
+    font-size: larger;
+    text-align: center;
+    justify-content: center;
+    align-self: center; 
+    border: solid 1px black;
+}
+
+table
+{
+    margin-left: auto;
+    margin-right: auto;
 }

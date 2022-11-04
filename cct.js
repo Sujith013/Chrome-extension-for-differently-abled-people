@@ -1,10 +1,6 @@
-function calcScore(prm)
+function camCalcScore(prm)
 {
-    var label = $("#ishId")[0].src;
-    var lbl = label[label.length-7];
-    var vl = $("#ishNum").val();
-
-    if(lbl==vl)
+     if($("#cctVs").val() == "visible")
     {
         if(prm==1)
         {
@@ -24,59 +20,50 @@ function calcScore(prm)
     }
 }
 
-function setVal(params)
+function setCamVal(params)
 {
     var max = 9;
     var min=0;
 
     var r = Math.random() * (max - min) + min;
-    var b = Math.random() * (max - min) + min;
 
-    var srcName = "data/"+params+"/"+Math.ceil(r)+"_"+Math.ceil(b)+".png";
+    var srcName = "data/cambridge/"+params+"/"+Math.ceil(r)+".jpg";
 
-    $("#ishId")[0].src = srcName;
+    $("#cctId")[0].src = srcName;
 }
 
 $(document).ready(function(){
     
-    $("#test1").click(function()
+    $("#test2").click(function()
     {    
-        setVal("red-green");
-        chrome.storage.sync.set({ishNextVal:1}, function() {});
+        setCamVal("red-green");
+        chrome.storage.sync.set({cctNextVal:1}, function() {});
         chrome.storage.sync.set({score1:0}, function() {});
         chrome.storage.sync.set({score2:0}, function() {});
-
-        $("#ishNum").focus();
     });
 
-    $("#ishNext").click(function(){
+    $("#cctNext").click(function(){
 
-        chrome.storage.sync.get(["ishNextVal"], function(result) {
-            if(result.ishNextVal<10)
+        chrome.storage.sync.get(["cctNextVal"], function(result) {
+            if(result.cctNextVal<10)
             {
-                calcScore(1);
-                setVal("red-green");
-                q = result.ishNextVal+1;
-                chrome.storage.sync.set({ishNextVal:q}, function() {});
-
-                $("#ishNum").focus();
-                $("#ishNum").val(null);
+                camCalcScore(1);
+                setCamVal("red-green");
+                q = result.cctNextVal+1;
+                chrome.storage.sync.set({cctNextVal:q}, function() {});
             }
 
-            else if(result.ishNextVal>=10 && result.ishNextVal<20)
+            else if(result.cctNextVal>=10 && result.cctNextVal<20)
             {
-                calcScore(2);
-                setVal("blue-yellow");
-                q = result.ishNextVal+1;
-                chrome.storage.sync.set({ishNextVal:q}, function() {});
-
-                $("#ishNum").focus();
-                $("#ishNum").val(null);
+                camCalcScore(2);
+                setCamVal("blue-yellow");
+                q = result.cctNextVal+1;
+                chrome.storage.sync.set({cctNextVal:q}, function() {});
             }
 
             else
             {
-                calcScore(2);
+                camCalcScore(2);
                 
                 chrome.storage.sync.get(["score1","score2"], function(result) {
 
@@ -127,7 +114,7 @@ $(document).ready(function(){
                         }
                     }
 
-                    $("#ishihara").css("display","none");
+                    $("#cct").css("display","none");
                     $("#bldRes").html(displayMsg);
                     $("#bldRes1").css({"display":"flex","flex-direction":"column"});
 

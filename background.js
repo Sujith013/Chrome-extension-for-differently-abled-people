@@ -1,9 +1,13 @@
 $(document).ready(function(){
 
+  chrome.storage.sync.set({page:1}, function() {});
+
     $("#next").click(function()
     {
       $("#mainDiv").css('display','none');    
       $("#qsre").css({"display":"flex","flex-direction":"column"});
+
+      chrome.storage.sync.set({page:2}, function() {});
     });
 
     $(".back").click(function()
@@ -16,6 +20,8 @@ $(document).ready(function(){
     {
       $("#qsre").css('display','none');    
       $("#choose").css({"display":"flex","flex-direction":"column"});
+
+      chrome.storage.sync.set({page:3}, function() {});
     });
 
     $("#colorpick1").click(function()
@@ -37,18 +43,16 @@ $(document).ready(function(){
     {
       $("#qsre").css('display','none');    
       $("#ishihara").css({"display":"flex","flex-direction":"column"});
+
+      chrome.storage.sync.set({page:5}, function() {});
     });
 
     $("#test2").click(function()
     {
       $("#qsre").css('display','none');    
       $("#cct").css({"display":"flex","flex-direction":"column"});
-    });
 
-    $("#test3").click(function()
-    {
-      $("#qsre").css('display','none');    
-      $("#hue").css({"display":"flex","flex-direction":"column"});
+      chrome.storage.sync.set({page:6}, function() {});
     });
 
     $("#finish").click(function()

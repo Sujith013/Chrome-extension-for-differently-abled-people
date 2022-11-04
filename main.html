@@ -17,12 +17,28 @@
 
     <h1 id="h1">Color blindness analyzer and solver</h1>
     <img src="icon.png" alt="icon" width="150px" height="150px">
-    <h4 id="para">An extension to ease the access and navigation of web content for color blind users.</p>
+    <h4 id="para">An extension to ease the access and navigation of web content for color blind users.</p> <br><br>
     
-    <br><br>
-    
-    <button id="next">Next -></button>
-    
+    <button id="next">Next -></button> <br><br> <hr>
+
+    <h2><u>Keyboard Shortkeys</u></h2> <br>
+
+    <table>
+      
+      <tr>
+        <th>Key</th>
+        <th>Function</th>
+      </tr>
+
+      <tr> <td>-></td>  <td>Navigate Forward"</td> </tr>
+      <tr> <td><-</td>  <td>Navigate Forward</td> </tr>
+      <tr> <td>x</td> <td>Close</td> </tr>
+      <tr> <td>i</td> <td>Take Ishihara Test</td> </tr>
+      <tr> <td>c</td> <td>Take Cambridge Test</td> </tr>
+      <tr> <td>s</td> <td>Build Solution</td> </tr>
+      
+    </table>
+
   </div>
 
   <div id="qsre" align="center">
@@ -32,12 +48,11 @@
     <h3>Take a quick test to find your problem!!</h3> <br>
     
     <button id="test1">Ishihara Test --></button> <br><br>
-    <button id="test1">Cambridge Color --></button> <br><br>
-    <button id="test1">Hue Test --></button> <br><br>
+    <button id="test2">Cambridge Color --></button> <br><br>
 
     <h3>Know your problem already?</h3> <br>
 
-    <button id="gotoSol">Go to Solution</button>
+    <button id="gotoSol">Go to Solution</button> <br>
   
   </div>
 
@@ -70,6 +85,23 @@
   
   </div>
 
+  <div id="cct">
+    
+    <h2>Cambridge Color Test</h2>
+    
+    <img id="cctId" width="150px" height="150px"> <br><br>
+
+    <select name="cctVs" id="cctVs">
+
+      <option value="visible">Visible</option>
+      <option value="invisible">Not Visible</option>
+    
+    </select> <br><br>
+
+    <button id="cctNext">Next</button>
+  
+  </div>
+
   <div id="bldRes1">
 
     <h2 id="bldRes"></h2> <br><br>
@@ -83,4 +115,6 @@
 <script src="jquery-3.6.1.min.js"></script>
 <script src="background.js"></script>
 <script src="ishihara.js"></script>
+<script src="cct.js"></script>
+<script src="keyboard.js"></script>
 </html>
