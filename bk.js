@@ -23,4 +23,6 @@ chrome.action.onClicked.addListener((tab) =>
 
   chrome.runtime.onInstalled.addListener(async () => {
     chrome.action.setPopup({popup: "main.html"});
+
+    chrome.storage.sync.set({Visit:1}, function() {});
 });

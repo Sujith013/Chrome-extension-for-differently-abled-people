@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
-    "name": "Color Blindness analyser and solver",
+    "name": "Problem analyser and solver for differently abled",
     "version": "1.0.0",
-    "description":"An extension to ease the access and navigation of web content for the color blind users by finding their problem and generating a solution for the same.",
+    "description":"An extension to ease the access and navigation of web content for the differently abled users by finding their problem and generating a solution for the same.",
     "icons":{
         "16":"icon.png",
         "48":"icon.png",
@@ -17,7 +17,8 @@
         "cookies",
         "storage",
         "scripting",
-        "activeTab"
+        "activeTab",
+        "tts"
         ],
     
     "background": {

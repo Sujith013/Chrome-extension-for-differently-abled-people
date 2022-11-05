@@ -34,7 +34,7 @@ button:hover{
     width: 200px;
 }
 
-#mainDiv
+#mainDiv,#spch
 {
     text-align: center;
     justify-content: center;

@@ -1,10 +1,34 @@
-$(document).ready(function(){
+$(document).ready(function()
+{
+  navigator.mediaDevices.getUserMedia({video: false, audio: true}).then((stream) => {
+    window.localStream = stream; 
+    window.localAudio.srcObject = stream;
+    window.localAudio.autoplay = true; 
+}).catch((err) => {
+    console.log("you got an error : "+err);
+});
+
+chrome.storage.sync.get(["Visit"], function(result) {
+  
+  if(result.Visit==1)
+  {
+//  window.open("main.html");
+    chrome.tts.speak('Hai.....Welcome to the chrome extension that finds your disability and solves your problem.......You may find the keyboard schortcuts for easier navigation below and the voice assistant right below that.', 
+    {'rate': 1.25});
+    
+    chrome.storage.sync.set({Visit:2}, function() {});
+  }
+});
 
   chrome.storage.sync.set({page:1}, function() {});
 
     $("#next").click(function()
     {
       $("#mainDiv").css('display','none');    
+      $("#bldRes1").css('display','none');    
+      $("#choose").css('display','none');    
+      $("#ishihara").css('display','none');    
+      $("#cct").css('display','none');    
       $("#qsre").css({"display":"flex","flex-direction":"column"});
 
       chrome.storage.sync.set({page:2}, function() {});
@@ -12,13 +36,23 @@ $(document).ready(function(){
 
     $(".back").click(function()
     {
+      $("#mainDiv").css('display','none');    
       $("#bldRes1").css('display','none');    
+      $("#choose").css('display','none');    
+      $("#ishihara").css('display','none');    
+      $("#cct").css('display','none');    
       $("#qsre").css({"display":"flex","flex-direction":"column"});
-    });
 
+      chrome.storage.sync.set({page:2}, function() {});
+    });
+  
     $("#gotoSol").click(function()
     {
+      $("#mainDiv").css('display','none');    
+      $("#bldRes1").css('display','none');    
       $("#qsre").css('display','none');    
+      $("#ishihara").css('display','none');    
+      $("#cct").css('display','none');    
       $("#choose").css({"display":"flex","flex-direction":"column"});
 
       chrome.storage.sync.set({page:3}, function() {});
@@ -41,7 +75,11 @@ $(document).ready(function(){
 
     $("#test1").click(function()
     {
+      $("#mainDiv").css('display','none');    
+      $("#bldRes1").css('display','none');    
+      $("#choose").css('display','none');    
       $("#qsre").css('display','none');    
+      $("#cct").css('display','none');    
       $("#ishihara").css({"display":"flex","flex-direction":"column"});
 
       chrome.storage.sync.set({page:5}, function() {});
@@ -49,6 +87,10 @@ $(document).ready(function(){
 
     $("#test2").click(function()
     {
+      $("#mainDiv").css('display','none');    
+      $("#bldRes1").css('display','none');    
+      $("#choose").css('display','none');    
+      $("#ishihara").css('display','none');    
       $("#qsre").css('display','none');    
       $("#cct").css({"display":"flex","flex-direction":"column"});
 

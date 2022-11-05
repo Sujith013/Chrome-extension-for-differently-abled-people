@@ -104,4 +104,14 @@ document.onkeydown = function (e) {
 
         chrome.storage.sync.set({page:3}, function() {});
     }
+
+    else if(e.key.toLowerCase()=="w")
+    {
+      document.getElementById("click_to_record").click();
+    }
+
+    else if(e.key.toLowerCase()=="h")
+    {
+      document.getElementById("speech_help").click();
+    }
 };
