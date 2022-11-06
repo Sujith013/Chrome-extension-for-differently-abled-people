@@ -1,7 +1,7 @@
 function colorPage() {
 
     var tagList = ["abbreviation","acronymn","address","area","button","code","datalist","label","p",
-                    "pre","span","td","th","summary","i"]
+                    "pre","span","td","th","summary","i","li"]
 
     var colors = {
         'complete': {
@@ -24,7 +24,11 @@ function colorPage() {
     };
 
     chrome.storage.sync.get(["color"], function(result) {
+        
         var color = result.color;
+
+        if(color==null) 
+            return
 
         document.body.style.color = colors[color].text;
         document.body.style.background = colors[color].background;
@@ -105,7 +109,11 @@ function googleColor()
     };
 
     chrome.storage.sync.get(["color"], function(result) {
+
         var color = result.color;
+
+        if(color==null) 
+            return
 
         var links = [];
 

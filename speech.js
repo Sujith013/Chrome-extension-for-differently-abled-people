@@ -10,7 +10,9 @@ function()
         "open mail" : "https://mail.google.com/",
         "open quora" : "https://www.quora.com/",
         "compose mail" : "https://mail.google.com/mail/u/0/#inbox?compose=new",
-        "twitter post" : "https://twitter.com/compose/tweet"
+        "twitter post" : "https://twitter.com/compose/tweet",
+        "google images":"https://www.google.co.in/imghp?hl=en&tab=ri&authuser=0&ogbl",
+        "open spotify" : "https://open.spotify.com/",
     }
     
         var speech = true;
