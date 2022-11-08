@@ -60,8 +60,8 @@ function()
         }
 });
 
-speech_help.addEventListener('click',
-function()
-{
-    chrome.tts.speak("I will now explain you the keywords used for the voice assistant.........Open is used for opening a website......Compase mail to compose a mail......Post tweet to post a tweet......Cambridge test or Ishihara test to take the respective test",{'rate': 1});
-});
+//speech_help.addEventListener('click',
+//function()
+//{
+    //chrome.tts.speak("I will now explain you the keywords used for the voice assistant.........Open is used for opening a website......Compase mail to compose a mail......Post tweet to post a tweet......Cambridge test or Ishihara test to take the respective test",{'rate': 1});
+//});
