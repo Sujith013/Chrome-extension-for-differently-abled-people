@@ -12,9 +12,7 @@ chrome.storage.sync.get(["Visit"], function(result) {
   
   if(result.Visit==1)
   {
-    //window.open("main.html");
-    chrome.tts.speak('Hai.....Welcome to the chrome extension that finds your disability and solves your problem.......You may find the keyboard schortcuts for easier navigation below and the voice assistant right below that.', 
-    {'rate': 1.25});
+    window.open("main.html");
 
     chrome.storage.sync.set({color:null}, function() {});
     
